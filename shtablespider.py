@@ -51,7 +51,7 @@ def get_info(web, filename):
     ws1 = wb.get_sheet_by_name("Sheet")
     for i in range(1, len(tr)):
         td = tr[i].find_all('td')
-
+        
         worldrank.append(td[0].string.strip())
         ws1.cell(row=i + 1, column=1).value = td[0].string.strip()
 
